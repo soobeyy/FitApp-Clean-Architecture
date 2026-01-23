@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mi_color_statusbar">#002147</color>
+    <color name="colorPrimary">#FFBB86FC</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_blue">#ADD8E6</color>
+    <color name="medium_light_blue">#7FBCEB</color>
+    <color name="medium_blue">#336699</color>
+    <color name="medium_dark_blue">#1A437D</color>
+    <color name="dark_blue">#003269</color>
+    <color name="gray">#808080</color>
+    <color name="light_gray">#D3D3D3</color>
+    <color name="green">#008000</color>
+    <color name="red">#FF0000</color>
+</resources>

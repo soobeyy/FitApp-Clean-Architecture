@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:padding="24dp">
+
+    <!-- EditText para ID del ejercicio -->
+
+    <!-- Button para Añadir ejercicio -->
+    <EditText
+        android:id="@+id/etExerciseId"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="ID del ejercicio"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textCursorDrawable="@drawable/white_cursor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/btnAddExercise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddExercise"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_button"
+        android:text="Añadir ejercicio"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etExerciseId" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

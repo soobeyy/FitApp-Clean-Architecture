@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- Fondo para el nombre y descripción -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardExerciseInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/medium_dark_blue"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvExerciseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tvExerciseDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Fondo para la lista de ejercicios -->
+    <FrameLayout
+        android:id="@+id/flImageContainer"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/rounded_image_background"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardExerciseInfo">
+
+        <ImageView
+            android:id="@+id/ivExerciseImage"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/addimage" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnEditExercise"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_margin="24dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/edit_exercise"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flImageContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

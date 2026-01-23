@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'edu.ub.pis2425.projecte'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "edu.ub.pis2425.projecte"
+        minSdk 28
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    //Añadido por nosotros
+    implementation project(':domain')
+    implementation project(':data')
+    implementation project(':features')
+
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation libs.firebase.firestore
+    implementation libs.cardview
+    implementation libs.navigation.runtime
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+    // <--
+    // Added dependencies
+    // ---
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.8.7'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.8'
+    implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+    implementation 'org.modelmapper:modelmapper:3.1.1'
+    implementation(libs.rxjava3.android)
+
+    implementation platform('com.google.firebase:firebase-bom:33.12.0')
+    implementation 'com.google.firebase:firebase-analytics'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs += [
+            "-Amapstruct.defaultInjectionStrategy=constructor"
+    ]
+}

@@ -1,0 +1,26 @@
+# --- Android & Gradle Basura ---
+.gradle/
+build/
+**/build/
+.idea/
+*.iml
+local.properties
+.DS_Store
+
+# --- Archivos generados y capturas ---
+/captures
+.externalNativeBuild
+.cxx
+
+# --- SEGURIDAD (Bloquear API Keys) ---
+google-services.json
+**/google-services.json
+*.keystore
+*.jks
+
+# --- Binarios y Ejecutables ---
+bin/
+**/bin/
+*.apk
+*.aab
+output-metadata.json

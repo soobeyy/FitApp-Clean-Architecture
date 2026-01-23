@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/logInFragment">
+
+    <action
+        android:id="@+id/action_global_logInFragment"
+        app:destination="@id/logInFragment"
+        app:popUpTo="@id/logInFragment"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_global_profileFragment"
+        app:destination="@id/profileFragment" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.authentication.ProfileFragment"
+        android:label="@string/fragment_profile_title"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_weekFragment"
+            app:destination="@id/weekFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+
+    <!-- Login -->
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.authentication.LogInFragment"
+        android:label="@string/fragment_login_title"
+        tools:layout="@layout/fragment_log_in">
+        <action
+            android:id="@+id/action_logInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_weekFragment"
+            app:destination="@id/weekFragment" />
+    </fragment>
+
+    <!-- Sign Up -->
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.authentication.SignUpFragment"
+        android:label="@string/fragment_signup_title"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+
+    <!-- Week / Home -->
+    <fragment
+        android:id="@+id/weekFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.week.WeekFragment"
+        android:label="@string/fragment_week_title"
+        tools:layout="@layout/fragment_week">
+        <action
+            android:id="@+id/action_weekFragment_to_exerciseListFragment"
+            app:destination="@id/exerciseListFragment" />
+        <action
+            android:id="@+id/action_weekFragment_to_routineListFragment"
+            app:destination="@id/routineListFragment" />
+        <action
+            android:id="@+id/action_weekFragment_to_selectRoutineFragment"
+            app:destination="@id/selectRoutineFragment" />
+        <action
+            android:id="@+id/action_weekFragment_to_routinesDayFragment"
+            app:destination="@id/routinesDayFragment" />
+    </fragment>
+
+    <!-- Exercise List -->
+    <fragment
+        android:id="@+id/exerciseListFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.exercises.ExerciseListFragment"
+        android:label="@string/fragment_exercise_list_title"
+        tools:layout="@layout/fragment_exercise_list">
+        <action
+            android:id="@+id/action_exerciseListFragment_to_createExerciseFragment"
+            app:destination="@id/createExerciseFragment" />
+        <action
+            android:id="@+id/action_exerciseListFragment_to_exerciseDetailFragment"
+            app:destination="@id/exerciseDetailFragment">
+            <argument
+                android:name="exercise"
+                app:argType="edu.ub.pis2425.projecte.domain.entities.Exercise" />
+        </action>
+        <action
+            android:id="@+id/action_exerciseListFragment_to_copyExerciseFragment"
+            app:destination="@id/copyExerciseFragment" />
+    </fragment>
+
+    <!-- Create Exercise -->
+    <fragment
+        android:id="@+id/createExerciseFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.exercises.CreateExerciseFragment"
+        android:label="@string/fragment_create_exercise_title"
+        tools:layout="@layout/fragment_create_exercise">
+        <action
+            android:id="@+id/action_createExerciseFragment_to_exerciseListFragment"
+            app:destination="@id/exerciseListFragment"
+            app:popUpTo="@id/weekFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <!-- Exercise Detail -->
+    <fragment
+        android:id="@+id/modifyExerciseFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.exercises.ModifyExerciseFragment"
+        android:label="@string/fragment_modify_exercise_title"
+        tools:layout="@layout/fragment_modify_exercise" />
+
+    <!-- Routine List -->
+    <fragment
+        android:id="@+id/routineListFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.routines.RoutineListFragment"
+        android:label="@string/fragment_routine_list_title"
+        tools:layout="@layout/fragment_routine_list">
+        <action
+            android:id="@+id/action_routineListFragment_to_createRoutineFragment"
+            app:destination="@id/createRoutineFragment" />
+        <action
+            android:id="@+id/action_routineListFragment_to_routineDetailFragment"
+            app:destination="@id/routineDetailFragment">
+            <argument
+                android:name="routineId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_routineListFragment_to_copyRoutineFragment"
+            app:destination="@id/copyRoutineFragment" />
+    </fragment>
+
+    <!-- Create Routine -->
+    <fragment
+        android:id="@+id/createRoutineFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.routines.CreateRoutineFragment"
+        android:label="@string/fragment_create_routine_title"
+        tools:layout="@layout/fragment_create_routine">
+        <action
+            android:id="@+id/action_createRoutineFragment_to_routineListFragment"
+            app:destination="@id/routineListFragment" />
+        <action
+            android:id="@+id/action_createRoutineFragment_to_selectExercisesFragment"
+            app:destination="@id/selectExercisesFragment" />
+    </fragment>
+
+    <!-- Select Exercises -->
+    <fragment
+        android:id="@+id/selectExercisesFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.routines.SelectExercisesFragment"
+        android:label="@string/fragment_select_exercises_title"
+        tools:layout="@layout/fragment_select_exercises">
+        <argument
+            android:name="routineId"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+    <!-- Select Routine Fragment -->
+    <fragment
+        android:id="@+id/selectRoutineFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.week.SelectRoutineFragment"
+        android:label="@string/fragment_select_routine_title"
+        tools:layout="@layout/fragment_select_routine">
+        <argument
+            android:name="dayId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_selectRoutineFragment_to_weekFragment"
+            app:destination="@id/weekFragment" />
+        <action
+            android:id="@+id/action_selectRoutineFragment_to_routineListFragment"
+            app:destination="@id/routineListFragment" />
+        <argument
+            android:name="routine"
+            app:argType="edu.ub.pis2425.projecte.domain.entities.Routine" />
+    </fragment>
+
+    <!-- Routines Day Fragment -->
+    <fragment
+        android:id="@+id/routinesDayFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.week.RoutinesDayFragment"
+        android:label="@string/fragment_routines_day_title"
+        tools:layout="@layout/fragment_routines_day">
+        <argument
+            android:name="dayId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_routinesDayFragment_to_rateRoutineFragment"
+            app:destination="@id/rateRoutineFragment" />
+        <action
+            android:id="@+id/action_routinesDayFragment_to_showValRoutineFragment"
+            app:destination="@id/showValRoutineFragment" />
+        <action
+            android:id="@+id/action_routinesDayFragment_to_weekFragment"
+            app:destination="@id/weekFragment" />
+    </fragment>
+
+    <!-- Rate Routine -->
+    <fragment
+        android:id="@+id/rateRoutineFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.week.RateRoutineFragment"
+        android:label="@string/fragment_rate_routine_title"
+        tools:layout="@layout/fragment_rate_routine">
+        <argument
+            android:name="routineId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_rateRoutineFragment_to_rateExerciseFragment"
+            app:destination="@id/rateExerciseFragment" />
+        <action
+            android:id="@+id/action_rateRoutineFragment_to_weekFragment"
+            app:destination="@id/weekFragment" />
+        <action
+            android:id="@+id/action_rateRoutineFragment_to_routinesDayFragment"
+            app:destination="@id/routinesDayFragment" />
+        <action
+            android:id="@+id/action_rateRoutineFragment_to_showValExerciseFragment"
+            app:destination="@id/showValExerciseFragment" />
+    </fragment>
+
+    <!-- Copy Exercise -->
+    <fragment
+        android:id="@+id/copyExerciseFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.exercises.CopyExerciseFragment"
+        android:label="@string/fragment_copy_exercise_title"
+        tools:layout="@layout/fragment_copy_exercise">
+        <action
+            android:id="@+id/action_copyExerciseFragment_to_exerciseListFragment"
+            app:destination="@id/exerciseListFragment"
+            app:popUpTo="@id/exerciseListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Copy Routine -->
+    <fragment
+        android:id="@+id/copyRoutineFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.routines.CopyRoutineFragment"
+        android:label="@string/fragment_copy_routine_title"
+        tools:layout="@layout/fragment_copy_routine">
+        <action
+            android:id="@+id/action_copyRoutineFragment_to_routineListFragment"
+            app:destination="@id/routineListFragment"
+            app:popUpTo="@id/routineListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Routine Detail -->
+    <fragment
+        android:id="@+id/routineDetailFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.routines.RoutineDetailFragment"
+        android:label="@string/fragment_routine_detail_title"
+        tools:layout="@layout/fragment_routine_detail">
+        <action
+            android:id="@+id/action_routineDetailFragment_to_modifyRoutineFragment"
+            app:destination="@id/modifyRoutineFragment" />
+        <action
+            android:id="@+id/action_routineDetailFragment_to_exerciseDetailFragment"
+            app:destination="@id/exerciseDetailFragment" />
+    </fragment>
+
+    <!-- Modify Routine -->
+    <fragment
+        android:id="@+id/modifyRoutineFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.routines.ModifyRoutineFragment"
+        android:label="@string/fragment_modify_routine_title"
+        tools:layout="@layout/fragment_modify_routine">
+        <action
+            android:id="@+id/action_modifyRoutineFragment_to_modifySelectionExercisesFragment"
+            app:destination="@id/modifySelectionExercisesFragment" />
+    </fragment>
+
+    <!-- Modify Selection Exercises -->
+    <fragment
+        android:id="@+id/modifySelectionExercisesFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.routines.ModifySelectionExercisesFragment"
+        android:label="@string/fragment_modify_selection_exercises_title"
+        tools:layout="@layout/fragment_modify_selection_exercises" />
+
+    <!-- Rate Exercise -->
+    <fragment
+        android:id="@+id/rateExerciseFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.week.RateExerciseFragment"
+        android:label="@string/fragment_rate_exercise_title"
+        tools:layout="@layout/fragment_rate_exercise">
+        <action
+            android:id="@+id/action_rateExerciseFragment_to_rateRoutineFragment"
+            app:destination="@id/rateRoutineFragment" />
+        <action
+            android:id="@+id/action_rateExerciseFragment_to_rateSerieFragment"
+            app:destination="@id/rateSerieFragment" />
+    </fragment>
+
+    <!-- Rate Serie -->
+    <fragment
+        android:id="@+id/rateSerieFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.week.RateSerieFragment"
+        android:label="@string/fragment_rate_serie_title"
+        tools:layout="@layout/fragment_rate_serie">
+        <action
+            android:id="@+id/action_rateSerieFragment_to_rateRoutineFragment"
+            app:destination="@id/rateRoutineFragment" />
+    </fragment>
+
+    <!-- Exercise Detail -->
+    <fragment
+        android:id="@+id/exerciseDetailFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.exercises.ExerciseDetailFragment"
+        android:label="@string/fragment_exercise_detail_title"
+        tools:layout="@layout/fragment_exercise_detail">
+        <action
+            android:id="@+id/action_exerciseDetailFragment_to_modifyExerciseFragment"
+            app:destination="@id/modifyExerciseFragment" />
+    </fragment>
+
+    <!-- Show Val Exercise -->
+    <fragment
+        android:id="@+id/showValExerciseFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.week.ShowValExerciseFragment"
+        android:label="@string/fragment_show_val_exercise_title"
+        tools:layout="@layout/fragment_show_val_exercise">
+        <action
+            android:id="@+id/action_showValExerciseFragment_to_rateRoutineFragment"
+            app:destination="@id/rateRoutineFragment" />
+    </fragment>
+
+    <!-- Show Val Routine -->
+    <fragment
+        android:id="@+id/showValRoutineFragment"
+        android:name="edu.ub.pis2425.projecte.presentation.ui.fragments.week.ShowValRoutineFragment"
+        android:label="@string/fragment_show_val_routine_title"
+        tools:layout="@layout/fragment_show_val_routine">
+        <action
+            android:id="@+id/action_showValRoutineFragment_to_routinesDayFragment"
+            app:destination="@id/routinesDayFragment" />
+        <action
+            android:id="@+id/action_showValRoutineFragment_to_showValExerciseFragment"
+            app:destination="@id/showValExerciseFragment" />
+    </fragment>
+
+</navigation>

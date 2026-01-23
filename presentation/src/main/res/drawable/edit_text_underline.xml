@@ -1,0 +1,14 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" /> <!-- Fondo transparente -->
+            <size android:height="2dp" />
+        </shape>
+    </item>
+    <item android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" /> <!-- Línea blanca debajo -->
+            <size android:height="2px" />
+        </shape>
+    </item>
+</layer-list>

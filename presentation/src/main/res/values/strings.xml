@@ -1,0 +1,132 @@
+<resources>
+    <string name="app_name">Projecte</string>
+
+    <!-- Login screen -->
+    <string name="login_title">FitApp</string>
+    <string name="login_text">Introduce tus credenciales:</string>
+    <string name="login_enter_username_hint">Email</string>
+    <string name="login_enter_password_hint">Contraseña</string>
+    <string name="login_button">Iniciar Sesión</string>
+    <string name="signup_button">Registrarse</string>
+
+    <!-- Signup screen -->
+    <string name="pre_signup_text">Crea una cuenta con tus credenciales :</string>
+    <string name="signup_text">Introduce tus credenciales para crear una cuenta:</string>
+    <string name="signup_enter_username_hint">Email</string>
+    <string name="signup_enter_password_hint">Contraseña</string>
+    <string name="signup_enter_password_confirmation_hint">Confirmar la contraseña</string>
+    <string name="signup_confirmation_button">Confirmar</string>
+    <string name="signup_title">Registrarse</string>
+    <string name="signup_email_hint">Email</string>
+
+    <!-- Week / Home -->
+    <string name="week_title">Semana</string>
+
+    <!-- Exercise buttons -->
+    <string name="exercice_button">Ejercicios</string>
+    <string name="go_week">Semana</string>
+    <string name="go_exercises">Ejercicios</string>
+    <string name="go_rutines">Rutinas</string>
+
+    <!-- Exercise list screen -->
+    <string name="exercise_list_title">Lista de ejercicios</string>
+    <string name="create_exer_button">Crear Ejercicio</string>
+
+    <!-- Create Exercise screen -->
+    <string name="create_exercise_title">Crear ejercicio</string>
+    <string name="exercise_name">Nombre del ejercicio</string>
+    <string name="exercise_description">Descripción del ejercicio</string>
+    <string name="exercise_save">Guardar ejercicio</string>
+
+    <!-- Exercise detail screen -->
+    <string name="exercise_detail_title">Información del ejercicio</string>
+    <string name="exercise_name_label">Nombre del ejercicio</string>
+    <string name="exercise_description_label">Descripción del ejercicio</string>
+    <string name="exercise_save_label">Guardar cambios</string>
+
+    <!-- Search -->
+    <string name="search_hint">Search by name…</string>
+
+    <!-- Profile screen -->
+    <string name="edit_profile_button">Editar perfil</string>
+    <string name="logout_button">Cerrar Sesión</string>
+    <string name="profile_title">Profile</string>
+
+    <!-- Delete dialogs -->
+    <string name="delete_exercise">Borrar ejercicio</string>
+    <string name="delete_exercise_title">Borrar ejercicio</string>
+    <string name="ok_button_label">OK</string>
+
+    <!-- Routine navigation -->
+    <string name="create_routine">Crear rutina</string>
+    <string name="routine_description">Información de la rutina (opcional)</string>
+    <string name="add_exercise">Añadir ejercicio</string>
+    <string name="routine_save">Guardar rutina</string>
+    <string name="routine_name_label">Nombre de la rutina</string>
+    <string name="select_exercises">Seleccionar ejercicios</string>
+    <string name="delete_routine_title">Borrar rutina</string>
+    <string name="edit_routine">Editar rutina</string>
+    <string name="rate_routine">Valorar rutina</string>
+
+    <string name="add_text">Añadir</string>
+
+    <!-- Routines Day -->
+
+    <string name="add_routine_to_day">Añadir rutina al día</string>
+
+    <string name="share_button_description">Compartir</string>
+
+
+    <string name="rate_exercise">Valorar</string>
+    <string name="init_exercise">Iniciar Ejercicio</string>
+
+    <string name="dont_do_exercise">No hacer</string>
+    <string name="set_weight">Peso (kg)</string>
+    <string name="repetitions">Repeticiones (nº)</string>
+
+    <string name="next_set">Valorar Siguiente Serie</string>
+    <string name="finish_exercise">Acabar Ejercicio</string>
+
+    <string name="edit_exercise">Editar ejercicio</string>
+    <string name="finish_routine_text">Acabar Rutina</string>
+
+    <string name="finish_routine">Acabar Rutina</string>
+    <string name="sensation_image_description">Indicador de sensaciones</string>
+
+    <string name="weight_format">%d kg</string>
+    <string name="repetitions_format">%d reps</string>
+    <string name="profile">Ver Perfil</string>
+    <string name="statistics">Estadisticas</string>
+    <string name="email">TuEmail</string>
+    <string name="created_routines">Rutinas creadas:</string>
+    <string name="created_exercises">Ejercicios creados:</string>
+    <string name="error_loading_client">Error al cargar el usuario</string>
+    <string name="zero">0</string>
+    <string name="back">Back</string>
+
+    <string name="fragment_profile_title">Perfil</string>
+    <string name="fragment_login_title">Iniciar Sesión</string>
+    <string name="fragment_signup_title">Registrarse</string>
+    <string name="fragment_week_title">Semana</string>
+    <string name="fragment_exercise_list_title">Lista de Ejercicios</string>
+    <string name="fragment_create_exercise_title">Crear Ejercicio</string>
+    <string name="fragment_modify_exercise_title">Modificar Ejercicio</string>
+    <string name="fragment_routine_list_title">Lista de Rutinas</string>
+    <string name="fragment_create_routine_title">Crear Rutina</string>
+    <string name="fragment_select_exercises_title">Seleccionar Ejercicios</string>
+    <string name="fragment_select_routine_title">Seleccionar Rutina</string>
+    <string name="fragment_routines_day_title">Rutinas del Día</string>
+    <string name="fragment_rate_routine_title">Valorar Rutina</string>
+    <string name="fragment_copy_exercise_title">Copiar Ejercicio</string>
+    <string name="fragment_copy_routine_title">Copiar Rutina</string>
+    <string name="fragment_routine_detail_title">Detalles de Rutina</string>
+    <string name="fragment_modify_routine_title">Modificar Rutina</string>
+    <string name="fragment_modify_selection_exercises_title">Modificar Selección de Ejercicios</string>
+    <string name="fragment_rate_exercise_title">Valorar Ejercicio</string>
+    <string name="fragment_rate_serie_title">Iniciar Ejercicio</string>
+    <string name="fragment_exercise_detail_title">Detalles de Ejercicio</string>
+    <string name="fragment_show_val_exercise_title">Valoración de Ejercicio</string>
+    <string name="fragment_show_val_routine_title">Valoración de Rutina</string>
+
+
+</resources>

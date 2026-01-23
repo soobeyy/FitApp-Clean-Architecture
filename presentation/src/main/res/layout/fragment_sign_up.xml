@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".presentation.ui.fragments.authentication.SignUpFragment">
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="297dp"
+        android:layout_height="378dp"
+        android:translationY="-200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewSignUp"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:translationY="225dp"
+        app:cardBackgroundColor="@color/medium_dark_blue"
+        app:cardCornerRadius="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="24dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="365dp"
+            android:layout_height="match_parent"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tvSignupTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signup_text"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etSignupUsername"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext"
+                android:hint="@string/signup_enter_username_hint"
+                android:inputType="text"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                android:textCursorDrawable="@drawable/white_cursor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSignupTitle" />
+
+            <EditText
+                android:id="@+id/etSignupPassword"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_edittext"
+                android:hint="@string/signup_enter_password_hint"
+                android:inputType="textPassword"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                android:textCursorDrawable="@drawable/white_cursor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etSignupUsername" />
+
+            <EditText
+                android:id="@+id/etSignupPasswordConfirmation"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_edittext"
+                android:hint="@string/signup_enter_password_confirmation_hint"
+                android:inputType="textPassword"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                android:textCursorDrawable="@drawable/white_cursor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etSignupPassword" />
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/custom_button"
+                android:backgroundTint="@color/light_blue"
+                android:text="@string/signup_confirmation_button"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etSignupPasswordConfirmation" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

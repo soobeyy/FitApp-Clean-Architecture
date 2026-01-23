@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Projecte" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Cambia el color principal a medium_dark para que afecte la Toolbar -->
+        <item name="colorPrimary">@color/medium_light_blue</item>
+        <item name="colorPrimaryVariant">@color/medium_blue</item> <!-- opcional -->
+        <item name="colorOnPrimary">@color/white</item> <!-- color del texto en la toolbar -->
+    </style>
+
+    <style name="ThemeOverlay.Toolbar" parent="Theme.ReactiveExample">
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <style name="ThemeOverlay.SearchView" parent="Widget.Material3.SearchView">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <!-- Text color -->
+        <item name="android:editTextColor">@color/white</item>
+        <item name="editTextColor">@color/white</item>
+        <!-- Hint text color -->
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:searchHintIcon">@color/white</item>
+        <!-- Icon color -->
+        <item name="android:tint">@color/white</item>
+        <!-- Close icon color -->
+        <item name="closeIconTint">@color/white</item>
+        <!-- Active icon color -->
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+
+    <style name="Theme.ReactiveExample" parent="Theme.Projecte" />
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <EditText
+        android:id="@+id/etExerciseName"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="@string/exercise_name_label"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/rounded_edittext"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:fontFamily="@font/roboto"
+        android:textCursorDrawable="@drawable/white_cursor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp" />
+
+    <FrameLayout
+        android:id="@+id/flImageContainer"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/rounded_image_background"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@+id/etExerciseName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+        <ImageView
+            android:id="@+id/ivExerciseImage"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/addimage" />
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/etExerciseDescription"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/rounded_edittext"
+        android:fontFamily="@font/roboto"
+        android:gravity="top"
+        android:hint="@string/exercise_description_label"
+        android:inputType="textMultiLine"
+        android:padding="16dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textCursorDrawable="@drawable/white_cursor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flImageContainer" />
+
+    <Button
+        android:id="@+id/btnSaveChanges"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/exercise_save_label"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etExerciseDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
